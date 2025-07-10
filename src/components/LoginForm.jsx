@@ -8,58 +8,56 @@ import Logo from "../logo.svg";
 // 1. Flex로 좌우 분할
 const FormWrapper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
   margin-top: 100px;
   /* 가로폭 지정 (ex: 700px), 반응형이면 min/max-width 사용 */
-  min-width: 700px;
+  width: 700px;
 `;
 
 // 2. 이미지 영역
 const ImageBox = styled.div`
-  width: 300px;  // 원하는 이미지 크기
-  height: 350px; // 폼 높이에 맞게
-  background: #eee; // 배경색(이미지 없을 때)
+  width: 45%;  // 전체의 45% 차지
+  min-width: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px 0 0 16px;
-  overflow: hidden;
 `;
 
 // 3. 폼 영역
 const Form = styled.form`
   background: #fff;
-  border-radius: 0 16px 16px 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  padding: 40px;
-  min-width: 350px;
+  padding: 48px 36px; //위아래/좌우 여백
+  width: 55%;
+  min-width: 300px;
   min-height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 12px; // 요소간 간격 추가
 `;
 
 const Input = styled.input`
   width: 100%;
-  padding: 12px;
-  margin-bottom: 16px;
+  padding: 14px;
+  margin-bottom: 12px;
   border: 1px solid ${({theme}) => theme.colors.border};
-  border-radius: 8px;
+  border-radius: ${({theme}) => theme.borderRadius};
   font-size: 16px;
+  box-sizing: border-box;
 `;
 
 const Label = styled.label`
   font-size: 15px;
-  margin-bottom: 6px;
-  display: block;
-  font-weight: 500;
+  margin-bottom: 5px;
+  font-weight: 600;
 `;
 
 const FindPwBox = styled.div`
   font-size: 14px;
   color: #444;
   text-align: right;
+  margin-top: 5px;
 `;
 
 const FindPwLink = styled.a`
