@@ -56,7 +56,7 @@ const Label = styled.label`
 const FindPwBox = styled.div`
   font-size: 14px;
   color: #444;
-  text-align: right;
+  text-align: center;
   margin-top: 5px;
 `;
 
